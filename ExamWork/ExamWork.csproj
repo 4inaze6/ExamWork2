@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\back.png" />
+    <None Remove="Images\delete.png" />
+    <None Remove="Images\icon.ico" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\order.png" />
+    <None Remove="Images\orderRedact.png" />
+    <None Remove="Images\user.png" />
+    <None Remove="Images\yourOrders.png" />
+    <None Remove="Images\Блескдлягуб_BeautyBomb.jpg" />
+    <None Remove="Images\Бронзер_ByTerry.jpg" />
+    <None Remove="Images\Консиллер_InfluenceBeauty.jpg" />
+    <None Remove="Images\Крем_Бархатныеручки.jpeg" />
+    <None Remove="Images\парфюм_Bugatti.jpg" />
+    <None Remove="Images\Парфюм_ChloeChloe.jpg" />
+    <None Remove="Images\Парфюм_COCOChanel.jpg" />
+    <None Remove="Images\парфюм_Dior.jpg" />
+    <None Remove="Images\парфюм_Gucci.jpg" />
+    <None Remove="Images\парфюм_Lacoste.jpg" />
+    <None Remove="Images\Парфюм_MaisonMargiela.jpg" />
+    <None Remove="Images\парфюм_MarcJacobs.jpg" />
+    <None Remove="Images\Парфюм_TomFord.jpg" />
+    <None Remove="Images\помада_Dior.jpg" />
+    <None Remove="Images\помада_Victoria%27sSecret.jpg" />
+    <None Remove="Images\Помада_VivienneSabo.png" />
+    <None Remove="Images\тени_GiorgioArmani.jpg" />
+    <None Remove="Images\тени_urban.jpg" />
+    <None Remove="Images\тональныйкрем_BelorDesignNude.jpg" />
+    <None Remove="Images\тушь_L%27OrealParis.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\back.png" />
+    <Resource Include="Images\delete.png" />
+    <Resource Include="Images\icon.ico" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\order.png" />
+    <Resource Include="Images\orderRedact.png" />
+    <Resource Include="Images\user.png" />
+    <Resource Include="Images\yourOrders.png" />
+    <Resource Include="Images\Блескдлягуб_BeautyBomb.jpg" />
+    <Resource Include="Images\Бронзер_ByTerry.jpg" />
+    <Resource Include="Images\Консиллер_InfluenceBeauty.jpg" />
+    <Resource Include="Images\Крем_Бархатныеручки.jpeg" />
+    <Resource Include="Images\парфюм_Bugatti.jpg" />
+    <Resource Include="Images\Парфюм_ChloeChloe.jpg" />
+    <Resource Include="Images\Парфюм_COCOChanel.jpg" />
+    <Resource Include="Images\парфюм_Dior.jpg" />
+    <Resource Include="Images\парфюм_Gucci.jpg" />
+    <Resource Include="Images\парфюм_Lacoste.jpg" />
+    <Resource Include="Images\Парфюм_MaisonMargiela.jpg" />
+    <Resource Include="Images\парфюм_MarcJacobs.jpg" />
+    <Resource Include="Images\Парфюм_TomFord.jpg" />
+    <Resource Include="Images\помада_Dior.jpg" />
+    <Resource Include="Images\помада_Victoria'sSecret.jpg" />
+    <Resource Include="Images\Помада_VivienneSabo.png" />
+    <Resource Include="Images\тени_GiorgioArmani.jpg" />
+    <Resource Include="Images\тени_urban.jpg" />
+    <Resource Include="Images\тональныйкрем_BelorDesignNude.jpg" />
+    <Resource Include="Images\тушь_L'OrealParis.jpg" />
+  </ItemGroup>
+
+</Project>

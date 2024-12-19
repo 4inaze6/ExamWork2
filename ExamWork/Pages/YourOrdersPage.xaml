@@ -1,0 +1,36 @@
+﻿<Page x:Class="ExamWork.Pages.YourOrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExamWork.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1200"
+      Title="Ваши заказы"
+      Loaded="Page_Loaded">
+
+    <DockPanel Background="#FFFFCC99">
+        <DockPanel VerticalAlignment="Top" DockPanel.Dock="Top">
+            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="BackButton" Click="BackButton_Click">
+                <Image Source="/Images/back.png" Height="50"/>
+            </Button>
+            <Label Content="Ароматный Мир" FontWeight="Bold" FontStyle="Italic"/>
+            <Image Height="50" Source="/Images/logo.png"/>
+            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="GoToAllOrdersButton" Click="GoToAllOrdersButton_Click" DockPanel.Dock="Right" Visibility="Collapsed">
+                <Image Source="/Images/orderRedact.png" Width="50"/>
+            </Button>
+            <Label x:Name="CurrentUserLabel" DockPanel.Dock="Right" Width="200"/>
+            <Image DockPanel.Dock="Right" Source="/Images/user.png" Width="50"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Ваши заказы" FontWeight="Bold"/>
+                <Image Width="50" Height="50" Source="/Images/yourOrders.png"/>
+            </StackPanel>
+        </DockPanel>
+        <ScrollViewer CanContentScroll="True">
+            <GroupBox>
+                <StackPanel x:Name="YourOrdersStackPanel">
+                </StackPanel>
+            </GroupBox>
+        </ScrollViewer>
+    </DockPanel>
+</Page>

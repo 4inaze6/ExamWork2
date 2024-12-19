@@ -1,0 +1,65 @@
+﻿<Page x:Class="ExamWork.Pages.ShopPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExamWork.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1200"
+      Title="Магазин"
+      FocusManager.FocusedElement="{x:Null}"
+      GotFocus="Page_GotFocus"
+      Loaded="Page_Loaded">
+
+    <DockPanel Background="#FFFFCC99">
+        <DockPanel VerticalAlignment="Top" DockPanel.Dock="Top">
+            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="BackButton" Click="BackButton_Click">
+                <Image Source="/Images/user.png" Height="50"/>
+            </Button>
+            <Label Content="Ароматный Мир" FontWeight="Bold" FontStyle="Italic"/>
+            <Image Height="50" Source="/Images/logo.png"/>
+            <Button Style="{StaticResource RoundedButtonStyle}" DockPanel.Dock="Right" x:Name="orderButton" Click="OrderButton_Click" Visibility="Hidden">
+                <Image Source="/Images/order.png" Width="30"/>
+            </Button>
+            <Label x:Name="CurrentUserLabel" DockPanel.Dock="Right" Width="200"/>
+            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="GoToAllOrdersButton" Click="GoToAllOrders_Click" DockPanel.Dock="Right" Visibility="Collapsed">
+                <Image Source="/Images/orderRedact.png" Width="50"/>
+            </Button>
+            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="GoToYourOrders" Click="GoToYourOrders_Click" DockPanel.Dock="Right">
+                <Image Source="/Images/yourOrders.png" Height="50"/>
+            </Button>
+            <TextBox Style="{StaticResource RoundedTextBoxStyle}"  x:Name="searchTextBox" Text="Найти" GotFocus="SearchTextBox_GotFocus" VerticalContentAlignment="Center"/>
+        </DockPanel>
+        <Label x:Name="searchedProductNameLabel" Width="100" DockPanel.Dock="Top" HorizontalAlignment="Left" Height="30"/>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Label x:Name="searchedProductsCount" Width="80" Content="20 из 20"/>
+            <Label Content="Стоимость:"/>
+            <ComboBox x:Name="SortComboBox" SelectionChanged="SortComboBox_SelectionChanged">
+                <ComboBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#FFFFCC99" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FFFFCC99" />
+                </ComboBox.Resources>
+                <ComboBoxItem Content="По возратанию"/>
+                <ComboBoxItem Content="По убыванию"/>
+            </ComboBox>
+            <Label Content="Производитель:"/>
+            <ComboBox x:Name="ManufacturerFilterComboBox" SelectionChanged="ManufactorerFilter_SelectionChanged">
+                <ComboBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#FFFFCC99" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FFFFCC99" />
+                </ComboBox.Resources>
+            </ComboBox>
+            <Label Content="Мин. цена:"/>
+            <TextBox Style="{StaticResource RoundedTextBoxStyle}"  x:Name="MinCostTextBox" Width="70" VerticalAlignment="Center" TextChanged="Cost_TextChanged"/>
+            <Label Content="Макс. цена:"/>
+            <TextBox Style="{StaticResource RoundedTextBoxStyle}"  x:Name="MaxCostTextBox" Width="70" VerticalAlignment="Center" TextChanged="Cost_TextChanged"/>
+            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="FilterOff" Content="Сбросить" Margin="2" Click="FilterOff_Click"/>
+        </StackPanel>
+        <ScrollViewer CanContentScroll="True">
+            <GroupBox>
+                <StackPanel x:Name="productsStackPanel">
+                </StackPanel>
+            </GroupBox>
+        </ScrollViewer>
+    </DockPanel>
+</Page>
